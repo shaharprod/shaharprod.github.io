@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shaharprod.github.io/sitemap.xml
+Sitemap: https://shaharprod.github.io/RAVMESER/sitemap.xml
+Sitemap: https://shaharprod.github.io/agents/sitemap.xml
+Sitemap: https://shaharprod.github.io/AI-learning-for-ALL/sitemap.xml
+Sitemap: https://shaharprod.github.io/ai-education-platform/sitemap.xml
