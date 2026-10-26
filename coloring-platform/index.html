@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>מועדון הצביעה של סנדי ודני</title>
+<!-- כתובת ישנה שמופיעה בקוד ה-QR של פרק 1. מעבירה לאתר הצביעה החדש, לפרק ולשפה הנכונים. -->
+<script>
+(function(){
+  var q=new URLSearchParams(location.search);
+  var ep=parseInt(q.get('ep')||q.get('e'),10); if(!(ep>=1&&ep<=12)) ep=1;
+  var l=q.get('lang'); if(l!=='he'&&l!=='en'){ l=/^he|^iw/i.test(navigator.language||'')?'he':'en'; }
+  location.replace('https://shaharprod.github.io/sandy-and-danny/?e='+ep+'&lang='+l);
+})();
+</script>
+<style>body{font-family:Arial,sans-serif;background:#fff8ef;color:#2b2340;text-align:center;padding:40px 16px}a{color:#e2557f;font-size:20px}</style>
+</head>
+<body>
+<p>🎨 עוברים למועדון הצביעה של סנדי ודני...</p>
+<p><a href="https://shaharprod.github.io/sandy-and-danny/?e=1&lang=he">לחצו כאן בעברית</a> · <a href="https://shaharprod.github.io/sandy-and-danny/?e=1&lang=en">English</a></p>
+</body>
+</html>
