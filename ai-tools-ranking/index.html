@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>כלי הבינה המלאכותית והתשתית שלי – לפי קטגוריות</title>
+<style>
+  :root { --bg:#f6f7fb; --card:#fff; --ink:#1b2330; --muted:#5b6678; --line:#e2e6ef; --accent:#3b5bdb; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"Segoe UI",Arial,"Noto Sans Hebrew",sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; }
+  header { background:linear-gradient(135deg,#1f3a8a,#3b5bdb); color:#fff; padding:36px 20px 28px; text-align:center; }
+  header h1 { margin:0 0 6px; font-size:1.9rem; }
+  header p { margin:0; opacity:.9; }
+  main { max-width:1000px; margin:0 auto; padding:20px; }
+  .filters { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin:6px 0 22px; }
+  .filters button { border:1px solid var(--line); background:#fff; color:var(--ink); padding:8px 14px; border-radius:999px; font-size:.95rem; cursor:pointer; }
+  .filters button.active { background:var(--accent); color:#fff; border-color:var(--accent); }
+  section.cat { margin-bottom:30px; }
+  section.cat h2 { font-size:1.25rem; margin:0 0 12px; padding-bottom:6px; border-bottom:2px solid var(--accent); }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  .card h3 { margin:0 0 4px; font-size:1.05rem; }
+  .card h3 a { color:var(--accent); text-decoration:none; }
+  .card h3 a:hover { text-decoration:underline; }
+  .card p { margin:0 0 8px; color:var(--muted); font-size:.93rem; }
+  .rank { display:inline-block; min-width:2.1em; text-align:center; background:#3b5bdb; color:#fff; border-radius:6px; font-size:.8rem; padding:0 6px; margin-inline-end:4px; }
+  .rank.none { background:#9aa3b5; }
+  .users { font-size:.85rem; background:#eef2ff; border-radius:8px; padding:6px 10px; color:#1b2330; }
+  .users.est { background:#fff8e1; }
+  .users.none { background:#f1f3f7; color:#5b6678; }
+  .users .src { color:#3b5bdb; margin-inline-start:4px; }
+  .users .tag { display:inline-block; font-size:.72rem; color:#5b6678; border:1px solid #d5dae6; border-radius:5px; padding:0 5px; margin-inline-start:4px; }
+  .score { display:inline-block; font-size:.8rem; background:#eef2ff; color:#2b3a8c; border-radius:6px; padding:2px 8px; }
+  .note { max-width:1000px; margin:0 auto 30px; padding:0 20px; color:var(--muted); font-size:.85rem; }
+  footer { text-align:center; color:var(--muted); font-size:.85rem; padding:20px; border-top:1px solid var(--line); }
+  .warn { background:#fff4e5; border:1px solid #f0b35a; border-radius:12px; padding:14px 18px; }
+  .warn ul { margin:8px 0 0; padding-inline-start:20px; }
+  .warn li { margin-bottom:6px; }
+  @media print { .filters { display:none; } header { background:#fff; color:#000; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>כלי הבינה המלאכותית והתשתית שלי</h1>
+  <p>שמוליק שחר · יועץ ומטמיע בינה מלאכותית לעסקים ולבעלי מקצוע</p>
+  <p style="margin-top:6px;font-size:.95rem">הכלים מדורגים לפי נתוני שימוש גלובליים, בתוך כל קטגוריה. לא לפי העדפה אישית.</p>
+</header>
+
+<main>
+  <div class="filters" id="filters"></div>
+
+  <section class="cat" data-cat="מודלים ועוזרים">
+    <h2>מודלים ועוזרי בינה מלאכותית</h2>
+    <div class="grid">
+      <div class="card"><h3><span class="rank">#1</span> <a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT / Codex</a></h3><p>מודל ראשי לסוכן הפרטי שלי, דרך מנוי קיים.</p><div class="users"><strong>משתמשים בעולם:</strong> ChatGPT: יותר ממיליארד משתמשים פעילים שבועיים (OpenAI, אוגוסט 2026). אתרי סטטיסטיקה מדווחים על 1.2 מיליארד בספטמבר 2026. <a class="src" href="https://superlines.io/articles/chatgpt-statistics" target="_blank" rel="noopener">מקור</a> <span class="tag">נתון שפורסם</span></div></div>
+      <div class="card"><h3><span class="rank">#2</span> <a href="https://gemini.google.com" target="_blank" rel="noopener">Gemini</a></h3><p>גיבוי למודלים ושימוש משני להקראה.</p><div class="users"><strong>משתמשים בעולם:</strong> מעל מיליארד משתמשים פעילים חודשיים באפליקציה (Google, 11/08/2026). <a class="src" href="https://siliconangle.com/2026/08/11/googles-gemini-ai-app-passes-1-billion-monthly-active-users/" target="_blank" rel="noopener">מקור</a> <span class="tag">נתון שפורסם</span></div></div>
+      <div class="card"><h3><span class="rank">#3</span> <a href="https://claude.ai" target="_blank" rel="noopener">Claude</a></h3><p>כלי העבודה המרכזי: כתיבה, בניית מערכות, סוכנים ואוטומציות.</p><div class="users est"><strong>משתמשים בעולם:</strong> כ-245 מיליון פעילים חודשיים באינטרנט ובמובייל. הערכת Sensor Tower, מאי 2026. Anthropic לא מפרסמת נתון רשמי. <a class="src" href="https://www.usecarly.com/blog/claude-statistics/" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank">#4</span> <a href="https://grok.com" target="_blank" rel="noopener">Grok</a></h3><p>עוזר הבינה המלאכותית של xAI, זמין באתר, באפליקציות וב-X.</p><div class="users"><strong>משתמשים בעולם:</strong> כ-117 מיליון פעילים חודשיים של יכולות Grok, כולל השימוש בתוך X (דיווח SpaceX לרשות ני"ע, מרץ 2026). <a class="src" href="https://pulse2.com/spacex-grok-reaches-117-million-users-as-ai-push-accelerates/" target="_blank" rel="noopener">מקור</a> <span class="tag">נתון שפורסם</span></div></div>
+      <div class="card"><h3><span class="rank">#5</span> <a href="https://www.perplexity.ai" target="_blank" rel="noopener">Perplexity</a></h3><p>מנוע תשובות שמחפש ברשת ומצטט מקורות. מתאים למחקר.</p><div class="users est"><strong>משתמשים בעולם:</strong> הערכות סותרות: בין כ-45 ל-100 מיליון ומעלה פעילים חודשיים (2026). <a class="src" href="https://sacra.com/c/perplexity" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank">#6</span> <a href="https://huggingface.co" target="_blank" rel="noopener">Hugging Face</a></h3><p>מודלים וסביבות הרצה פתוחות.</p><div class="users"><strong>משתמשים בעולם:</strong> 13 מיליון משתמשים רשומים (דוח Hugging Face עצמה, 2025). זה מספר רשומים, לא פעילים. <a class="src" href="https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026" target="_blank" rel="noopener">מקור</a> <span class="tag">נתון שפורסם</span></div></div>
+    </div>
+  </section>
+
+  <section class="cat" data-cat="סוכנים ורתמות">
+    <h2>סוכנים אוטונומיים ורתמות (Agent Harnesses)</h2>
+    <div class="grid">
+      <div class="card"><h3><span class="rank">#1</span> <a href="https://www.anthropic.com/product/claude-code" target="_blank" rel="noopener">Claude Code</a></h3><p>רתמת סוכן לבנייה וקוד של Anthropic: קוראת את בסיס הקוד, משנה קבצים, מריצה בדיקות ועובדת מהטרמינל, מה-IDE ומאפליקציית שולחן העבודה.</p><div class="users est"><strong>משתמשים בעולם:</strong> כ-245 מיליון פעילים חודשיים באינטרנט ובמובייל. הערכת Sensor Tower, מאי 2026. Anthropic לא מפרסמת נתון רשמי. <a class="src" href="https://www.usecarly.com/blog/claude-statistics/" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank">#2</span> <a href="https://developers.openai.com/codex/cli/" target="_blank" rel="noopener">Codex CLI</a></h3><p>סוכן הקוד של OpenAI שרץ מקומית מהטרמינל, וכלול במנויי ChatGPT בתשלום.</p><div class="users"><strong>משתמשים בעולם:</strong> Codex בכללותו (כולל ה-CLI): 5 מיליון משתמשים פעילים שבועיים (OpenAI, 02/06/2026). נתון ל-CLI בלבד לא נמצא. <a class="src" href="https://tech-insider.org/ie/openai-codex-5-million-users-2026/" target="_blank" rel="noopener">מקור</a> <span class="tag">נתון שפורסם</span></div></div>
+      <div class="card"><h3><span class="rank">#3</span> <a href="https://cursor.com" target="_blank" rel="noopener">Cursor</a></h3><p>עורך קוד מבוסס VS Code עם סוכן מובנה.</p><div class="users est"><strong>משתמשים בעולם:</strong> אין נתון רשמי שנמצא. כ-18% מהמפתחים המקצועיים משתמשים בו בעבודה (סקר JetBrains, ינואר 2026). <a class="src" href="https://www.secondtalent.com/resources/cursor-statistics/" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://hermes-agent.nousresearch.com/docs/" target="_blank" rel="noopener">Hermes Agent</a></h3><p>סוכן קוד פתוח של Nous Research שלומד ממשימות ומתחבר לטלגרם, ל-WhatsApp ועוד. אצלי הוא רץ על שרת פרטי.</p><div class="users none"><strong>משתמשים בעולם:</strong> לא נמצא נתון גלובלי אמין בסבב המחקר הזה. <span class="tag">אין נתון</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://openclaw.ai" target="_blank" rel="noopener">OpenClaw</a></h3><p>סוכן קוד פתוח שרץ על המחשב או על שרת ומבצע משימות דרך אפליקציות הודעות. יש לו גישה רחבה למערכת, ולכן נדרשת זהירות.</p><div class="users none"><strong>משתמשים בעולם:</strong> לא נמצא נתון גלובלי אמין בסבב המחקר הזה. <span class="tag">אין נתון</span></div></div>
+    </div>
+  </section>
+
+  <section class="cat" data-cat="קול ומוזיקה">
+    <h2>קול ומוזיקה</h2>
+    <div class="grid">
+      <div class="card"><h3><span class="rank">#1</span> <a href="https://suno.com" target="_blank" rel="noopener">Suno</a></h3><p>יצירת מוזיקה ושירים.</p><div class="users"><strong>משתמשים בעולם:</strong> מעל 100 מיליון משתמשים מצטברים (לא פעילים) ו-2 מיליון מנויים משלמים (Suno, פברואר 2026). <a class="src" href="https://www.documentarytube.com/blog/suno-says-it-reached-2-million-paid-subscribers-and-300-million-in-arr/" target="_blank" rel="noopener">מקור</a> <span class="tag">נתון שפורסם</span></div></div>
+      <div class="card"><h3><span class="rank">#2</span> <a href="https://elevenlabs.io" target="_blank" rel="noopener">ElevenLabs</a></h3><p>הקראה בעברית ובניית קול לסרטונים ולסוכנים קוליים.</p><div class="users est"><strong>משתמשים בעולם:</strong> אין נתון עדכני של משתמשים רשומים. נתונים ישנים: מעל מיליון רשומים כבר ב-2023, והחברה טוענת למעל מיליארד משתמשי קצה דרך API. <a class="src" href="https://algeriatech.news/elevenlabs-11-billion-voice-ai-ipo-series-d-2026/" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank">#3</span> <a href="https://speechify.com" target="_blank" rel="noopener">Speechify</a></h3><p>הקראת טקסטים, מסמכים ודפי אינטרנט בקול טבעי.</p><div class="users est"><strong>משתמשים בעולם:</strong> מעל 50 מיליון משתמשים לפי תיאור האפליקציה של החברה (נתון שיווקי, לא מאומת). <a class="src" href="https://similarweb.com/pt/app/google/com.cliffweitzman.speechify2" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank">#4</span> <a href="https://murf.ai" target="_blank" rel="noopener">Murf AI</a></h3><p>הקלטות קריינות והקראה מבוססות AI לסרטוני הדרכה ושיווק.</p><div class="users est"><strong>משתמשים בעולם:</strong> החברה מצהירה על מעל 10 מיליון משתמשים (2026). מקורות אחרים מציגים 6 מיליון, כך שהנתון לא עקבי. <a class="src" href="https://yespress.io/murf-ai" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://www.udio.com" target="_blank" rel="noopener">Udio</a></h3><p>יצירת מוזיקה ושירים מטקסט, מתחרה של Suno.</p><div class="users none"><strong>משתמשים בעולם:</strong> לא נמצא מספר משתמשים כולל. לאפליקציית ה-iOS בלבד מוערכים כ-11.7 אלף פעילים חודשיים (AppGoblin). <a class="src" href="https://appgoblin.info/apps/6511211165" target="_blank" rel="noopener">מקור</a> <span class="tag">אין נתון</span></div></div>
+    </div>
+  </section>
+
+  <section class="cat" data-cat="דיבור ותמלול">
+    <h2>דיבור, הכתבה ותמלול</h2>
+    <div class="grid">
+      <div class="card"><h3><span class="rank">#1</span> <a href="https://otter.ai" target="_blank" rel="noopener">Otter.ai</a></h3><p>תמלול וסיכום פגישות אוטומטי בזמן אמת.</p><div class="users"><strong>משתמשים בעולם:</strong> מעל 40 מיליון משתמשים מצטברים (Otter.ai, אוקטובר 2026). החברה לא מפרסמת פעילים חודשיים. <a class="src" href="https://siliconangle.com/?p=851252" target="_blank" rel="noopener">מקור</a> <span class="tag">נתון שפורסם</span></div></div>
+      <div class="card"><h3><span class="rank">#2</span> <a href="https://www.descript.com" target="_blank" rel="noopener">Descript</a></h3><p>עריכת אודיו ווידאו דרך עריכת התמלול עצמו.</p><div class="users est"><strong>משתמשים בעולם:</strong> מעל 7 מיליון משתמשים רשומים (תחילת 2026, מקור משני שמצטט את החברה). <a class="src" href="https://voxbooster.com/blog/podcast-voice-ai-adoption-statistics-2026/" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://wisprflow.ai" target="_blank" rel="noopener">Wispr Flow</a></h3><p>הכתבה קולית בכל אפליקציה, במחשב ובטלפון, ביותר מ-100 שפות.</p><div class="users none"><strong>משתמשים בעולם:</strong> לא נמצא נתון גלובלי אמין בסבב המחקר הזה. <span class="tag">אין נתון</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://huggingface.co/ivrit-ai" target="_blank" rel="noopener">ivrit.ai</a></h3><p>מודלי תמלול פתוחים לעברית, מבוססי Whisper, וכן מאגרי נתונים של דיבור בעברית.</p><div class="users none"><strong>משתמשים בעולם:</strong> לא נמצא נתון גלובלי אמין בסבב המחקר הזה. <span class="tag">אין נתון</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://github.com/shaharprod/Retrieval-based-Voice-Conversion-WebUI" target="_blank" rel="noopener">RVC (החלפת קול)</a></h3><p>כלי קוד פתוח להחלפת קול והמרת דיבור.</p><div class="users none"><strong>משתמשים בעולם:</strong> לא נמצא נתון גלובלי אמין בסבב המחקר הזה. <span class="tag">אין נתון</span></div></div>
+    </div>
+  </section>
+
+  <section class="cat" data-cat="סקילים">
+    <h2>ספריות סקילים (Skills)</h2>
+    <div class="grid">
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://agentskills.co.il/he" target="_blank" rel="noopener">Skills-IL (agentskills.co.il)</a></h3><p>ספרייה ישראלית חינמית בקוד פתוח של סקילים ושרתי MCP לסוכני בינה מלאכותית: מסמכים בעברית, מיסים והנהלת חשבונות, שירותי ממשלה, נגישות ועוד. הספרייה נוסדה ומתוחזקת על ידי אלכס חורושין.</p><div class="users none"><strong>משתמשים בעולם:</strong> לא נמצא נתון גלובלי אמין בסבב המחקר הזה. <span class="tag">אין נתון</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">anthropics/skills (GitHub)</a></h3><p>המאגר הרשמי של Anthropic לסקילים של Claude, כולל המפרט ותבנית התחלה.</p><div class="users none"><strong>משתמשים בעולם:</strong> אין מספר משתמשים. כ-124 אלף כוכבים בגיטהאב (26/04/2026). כוכבים אינם משתמשים. <a class="src" href="https://jc-aiwiki.pages.dev/claude-ai/anthropic-skills-repo" target="_blank" rel="noopener">מקור</a> <span class="tag">אין נתון</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://smithery.ai" target="_blank" rel="noopener">Smithery</a></h3><p>רישום וחיבור של שרתי MCP וסקילים לסוכנים.</p><div class="users none"><strong>משתמשים בעולם:</strong> אין מספר משתמשים. האתר מציג כ-128 אלף סקילים באינדקס. <a class="src" href="https://smithery.ai/skills?ns=modu-ai" target="_blank" rel="noopener">מקור</a> <span class="tag">אין נתון</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://registry.modelcontextprotocol.io" target="_blank" rel="noopener">MCP Registry (הרישום הרשמי)</a></h3><p>הקטלוג הרשמי של שרתי MCP.</p><div class="users none"><strong>משתמשים בעולם:</strong> אין מספר משתמשים. זה קטלוג רשמי של שרתי MCP. <a class="src" href="https://registry.modelcontextprotocol.io" target="_blank" rel="noopener">מקור</a> <span class="tag">אין נתון</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://skills.sh" target="_blank" rel="noopener">skills.sh</a></h3><p>אינדקס סקילים להתקנה לסוכני קוד.</p><div class="users none"><strong>משתמשים בעולם:</strong> אין מספר משתמשים. כ-69.8 אלף סקילים באינדקס (פברואר 2026, מקור משני). <a class="src" href="https://agenticskills.io/learn/claude-skills-marketplace" target="_blank" rel="noopener">מקור</a> <span class="tag">אין נתון</span></div></div>
+    </div>
+  </section>
+
+  <section class="cat" data-cat="וידאו ועיצוב">
+    <h2>וידאו, תמונה ועיצוב</h2>
+    <div class="grid">
+      <div class="card"><h3><span class="rank">#1</span> <a href="https://www.capcut.com" target="_blank" rel="noopener">CapCut</a></h3><p>עריכת וידאו ותמונה עם כלי AI ותבניות.</p><div class="users"><strong>משתמשים בעולם:</strong> מעל 660 מיליון משתמשים (הודעת החברה, 06/09/2026). <a class="src" href="https://alvinology.com/2026/09/14/capcut-celebrates-660-million-users-with-first-capcut-world-in-singapore/" target="_blank" rel="noopener">מקור</a> <span class="tag">נתון שפורסם</span></div></div>
+      <div class="card"><h3><span class="rank">#2</span> <a href="https://www.canva.com" target="_blank" rel="noopener">Canva</a></h3><p>עיצוב גרפי ותבניות.</p><div class="users"><strong>משתמשים בעולם:</strong> 265 מיליון משתמשים פעילים חודשיים, מהם כ-31 מיליון משלמים (Canva, 2026). <a class="src" href="https://dataconomy.com/2026/02/19/canva-is-using-chatgpt-to-drive-millions-of-new-design-projects/" target="_blank" rel="noopener">מקור</a> <span class="tag">נתון שפורסם</span></div></div>
+      <div class="card"><h3><span class="rank">#3</span> <a href="https://www.midjourney.com" target="_blank" rel="noopener">Midjourney</a></h3><p>יצירת תמונות מטקסט באיכות גבוהה.</p><div class="users est"><strong>משתמשים בעולם:</strong> כ-19.83 מיליון משתמשים רשומים (ינואר 2026), לא פעילים. 1.2 עד 2.5 מיליון פעילים יומיים (הערכה). <a class="src" href="https://morphed.app/stats/midjourney-statistics" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://higgsfield.ai" target="_blank" rel="noopener">Higgsfield</a></h3><p>יצירת וידאו ותמונות לרשתות החברתיות.</p><div class="users none"><strong>משתמשים בעולם:</strong> לא נמצא נתון גלובלי אמין בסבב המחקר הזה. <span class="tag">אין נתון</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://everygen.ai" target="_blank" rel="noopener">Everygen</a></h3><p>וידאו מהיר. מחובר, אך לא בשימוש פעיל כרגע.</p><div class="users none"><strong>משתמשים בעולם:</strong> לא נמצא נתון גלובלי אמין בסבב המחקר הזה. <span class="tag">אין נתון</span></div></div>
+    </div>
+  </section>
+
+  <section class="cat" data-cat="שיווק ורשתות">
+    <h2>שיווק ורשתות חברתיות</h2>
+    <div class="grid">
+      <div class="card"><h3><span class="rank">#1</span> <a href="https://vidiq.com" target="_blank" rel="noopener">vidIQ</a></h3><p>מחקר ואנליטיקה לוידאו ולרשתות.</p><div class="users est"><strong>משתמשים בעולם:</strong> כ-20 מיליון יוצרים לפי החברה. זה נתון שיווקי, לא פעילים; באפליקציה מופיע גם "30 מיליון". <a class="src" href="https://yespress.io/vidiq" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank">#2</span> <a href="https://www.hootsuite.com" target="_blank" rel="noopener">Hootsuite</a></h3><p>ניהול ותזמון פרסום ברשתות חברתיות לצוותים.</p><div class="users est"><strong>משתמשים בעולם:</strong> מעל 16 מיליון משתמשים (מרץ 2018, נתון ישן). מספר עדכני לא נמצא. <a class="src" href="https://www.Wikipedia.com/wiki/Hootsuite" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank">#3</span> <a href="https://adsmanager.facebook.com" target="_blank" rel="noopener">Meta Ads Manager</a></h3><p>ניהול קמפיינים ממומנים.</p><div class="users est"><strong>משתמשים בעולם:</strong> כ-10 מיליון מפרסמים פעילים בחודש (הערכה משנית). מעל 8 מיליון מפרסמים משתמשים בכלי יצירה מבוססי AI של Meta (Meta, Q1 2026). <a class="src" href="https://ppc.land/meta-q1-2026-56-3b-revenue-as-ai-tools-double-advertiser-adoption/" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank">#4</span> <a href="https://i.mtr.cool/metricoolaff" target="_blank" rel="noopener sponsored">Metricool</a> <small style="color:#b45309">(קישור שותפים)</small></h3><p>תכנון ופרסום תוכן לרשתות.</p><div class="users est"><strong>משתמשים בעולם:</strong> בין 1.5 ל-2 מיליון משתמשים רשומים (נתוני החברה והמייסד, 2024; ללא עדכון חדש). <a class="src" href="https://starterstory.herokuapp.com/stories/metricool" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank">#5</span> <a href="https://buffer.com" target="_blank" rel="noopener">Buffer</a></h3><p>תזמון פוסטים ואנליטיקה לרשתות, פשוט וזול.</p><div class="users est"><strong>משתמשים בעולם:</strong> כ-256 אלף פעילים חודשיים (ספטמבר 2026, נתון משני לא מאומת). <a class="src" href="https://marketful.com/hootsuite-alternatives" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+    </div>
+  </section>
+
+  <section class="cat" data-cat="שרתים ו-Backend">
+    <h2>שרתים, Backend ו-GitHub</h2>
+    <div class="grid">
+      <div class="card"><h3><span class="rank">#1</span> <a href="https://github.com" target="_blank" rel="noopener">GitHub</a></h3><p>ניהול קוד, גיבויים ואתרים ב-GitHub Pages.</p><div class="users"><strong>משתמשים בעולם:</strong> 225 מיליון משתמשים (Microsoft, 29/07/2026; Octoverse 2026), מהם כ-50 מיליון משתמשי Copilot. <a class="src" href="https://axis-intelligence.com/github-statistics/" target="_blank" rel="noopener">מקור</a> <span class="tag">נתון שפורסם</span></div></div>
+      <div class="card"><h3><span class="rank">#2</span> <a href="https://vercel.com" target="_blank" rel="noopener">Vercel</a></h3><p>אירוח ופריסת אתרים ואפליקציות.</p><div class="users est"><strong>משתמשים בעולם:</strong> כ-6 מיליון מפתחים (נכון לתחילת 2025, מקור משני). נתון חדש יותר לא נמצא. <a class="src" href="https://shipper.now/vercel-v0-stats/" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank">#3</span> <a href="https://railway.com" target="_blank" rel="noopener">Railway</a></h3><p>אירוח שירותי Backend, עם מגבלת שימוש מוגדרת.</p><div class="users est"><strong>משתמשים בעולם:</strong> מעל 2 מיליון משתמשים (ינואר 2026, לפי Sacra). <a class="src" href="https://sacra.com/c/railway" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank">#4</span> <a href="https://tailscale.com" target="_blank" rel="noopener">Tailscale</a></h3><p>רשת פרטית ומאובטחת בין המכשירים והשרת.</p><div class="users est"><strong>משתמשים בעולם:</strong> מאות אלפי פעילים חודשיים בשימוש אישי חינמי (בלוג Tailscale, ישן). <a class="src" href="https://tailscale.com/blog/5000-customers" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://www.hostinger.com/vps-hosting" target="_blank" rel="noopener">שרת וירטואלי פרטי (VPS)</a></h3><p>ליבת ה-Backend: סוכנים, אוטומציות ומערכות פנימיות.</p><div class="users none"><strong>משתמשים בעולם:</strong> לא רלוונטי: זו תשתית פרטית ולא מוצר עם מספר משתמשים. <span class="tag">אין נתון</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://firebase.google.com" target="_blank" rel="noopener">Firebase</a></h3><p>אירוח אתר הקורס.</p><div class="users none"><strong>משתמשים בעולם:</strong> לא נמצא נתון משתמשים אמין בסבב המחקר הזה. <span class="tag">אין נתון</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://stytch.com" target="_blank" rel="noopener">Stytch</a></h3><p>התחברות והרשאות. בשלב ניסוי.</p><div class="users none"><strong>משתמשים בעולם:</strong> לא נמצא נתון משתמשים אמין בסבב המחקר הזה. <span class="tag">אין נתון</span></div></div>
+    </div>
+  </section>
+
+  <section class="cat" data-cat="אחסון וידע">
+    <h2>אחסון, מסמכים וידע</h2>
+    <div class="grid">
+      <div class="card"><h3><span class="rank">#1</span> <a href="https://drive.google.com" target="_blank" rel="noopener">Google Drive</a></h3><p>האחסון הראשי: גיליונות, קבצים ותמונות.</p><div class="users est"><strong>משתמשים בעולם:</strong> Google לא מפרסמת מספר נפרד ל-Drive. הערכות צד שלישי: 1 עד 3 מיליארד. ל-Google Docs מעל מיליארד פעילים חודשיים. <a class="src" href="https://sqmagazine.co.uk/google-workspace-statistics/" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank">#2</span> <a href="https://www.dropbox.com" target="_blank" rel="noopener">Dropbox</a></h3><p>אחסון וסנכרון קבצים ושיתוף.</p><div class="users"><strong>משתמשים בעולם:</strong> מעל 700 מיליון משתמשים רשומים ו-18.2 מיליון משלמים (Dropbox, 05/11/2026). המספר הרשום לא השתנה מ-2020. <a class="src" href="https://www.morningstar.com/news/business-wire/20261105521246/dropbox-announces-third-quarter-2026-results" target="_blank" rel="noopener">מקור</a> <span class="tag">נתון שפורסם</span></div></div>
+      <div class="card"><h3><span class="rank">#3</span> <a href="https://www.notion.so" target="_blank" rel="noopener">Notion</a></h3><p>דפי בקרה וידע לפרויקטים.</p><div class="users"><strong>משתמשים בעולם:</strong> כ-100 מיליון משתמשים (Notion, 2026). <a class="src" href="https://aimagazine.com/news/notion-ai-agents-for-a-workspace-used-by-100-million-people" target="_blank" rel="noopener">מקור</a> <span class="tag">נתון שפורסם</span></div></div>
+      <div class="card"><h3><span class="rank">#4</span> <a href="https://airtable.com" target="_blank" rel="noopener">Airtable</a></h3><p>בסיסי נתונים ואפליקציות בקוד נמוך.</p><div class="users"><strong>משתמשים בעולם:</strong> 10 מיליון משתמשים פעילים ומעל 500 אלף ארגונים (אתר Airtable, 2026). <a class="src" href="https://airtable.com/about" target="_blank" rel="noopener">מקור</a> <span class="tag">נתון שפורסם</span></div></div>
+      <div class="card"><h3><span class="rank">#5</span> <a href="https://obsidian.md" target="_blank" rel="noopener">Obsidian</a></h3><p>מוח שני מקומי להערות וקישורים.</p><div class="users est"><strong>משתמשים בעולם:</strong> כ-1.5 מיליון פעילים חודשיים. הערכה, לא נתון רשמי (מרץ 2026). <a class="src" href="https://www.taskade.com/blog/obsidian-history" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+    </div>
+  </section>
+
+  <section class="cat" data-cat="אוטומציה">
+    <h2>כלי אוטומציה</h2>
+    <div class="grid">
+      <div class="card"><h3><span class="rank">#1</span> <a href="https://powerautomate.microsoft.com" target="_blank" rel="noopener">Microsoft Power Automate</a></h3><p>אוטומציה של תהליכים בסביבת Microsoft 365.</p><div class="users est"><strong>משתמשים בעולם:</strong> Microsoft לא פרסמה נתון ל-Power Automate לבדו. Power Platform כולה: מעל 48 מיליון פעילים חודשיים (2024). <a class="src" href="https://www.syskit.com/blog/microsoft-power-platform-in-numbers" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank">#2</span> <a href="https://zapier.com" target="_blank" rel="noopener">Zapier</a></h3><p>אוטומציה משלימה. שימוש מועט.</p><div class="users est"><strong>משתמשים בעולם:</strong> מעל 2 מיליון משתמשי עסקים. מקור משני, לא מאומת. <a class="src" href="https://baeseokjae.github.io/posts/n8n-vs-zapier-vs-make-automation-2026/" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank">#3</span> <a href="https://www.make.com" target="_blank" rel="noopener">Make</a></h3><p>אוטומציה משלימה. שימוש מועט.</p><div class="users est"><strong>משתמשים בעולם:</strong> כ-1.5 מיליון משתמשים (תחילת 2025, מקור משני). <a class="src" href="https://automationatlas.io/guides/zapier-vs-make-vs-n8n-comparison/" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank">#4</span> <a href="https://n8n.io" target="_blank" rel="noopener">n8n</a></h3><p>כלי האוטומציה המרכזי, מותקן על השרת הפרטי.</p><div class="users est"><strong>משתמשים בעולם:</strong> כ-230 אלף פעילים חודשיים לפי טלמטריה בלבד (ינואר 2026). מכיוון שהכלי מותקן עצמאית, המספר האמיתי כנראה גבוה יותר. <a class="src" href="https://jlw-newsletter.pages.dev/jlw-2026-01-30-v8.html" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://composio.dev" target="_blank" rel="noopener">Composio</a></h3><p>חיבורי כלים נוספים לסוכנים.</p><div class="users none"><strong>משתמשים בעולם:</strong> לא נמצא נתון משתמשים אמין בסבב המחקר הזה. <span class="tag">אין נתון</span></div></div>
+    </div>
+  </section>
+
+  <section class="cat" data-cat="ניטור">
+    <h2>ניטור ובקרה</h2>
+    <div class="grid">
+      <div class="card"><h3><span class="rank">#1</span> <a href="https://grafana.com" target="_blank" rel="noopener">Grafana</a></h3><p>לוחות בקרה וניטור של מערכות ושרתים.</p><div class="users est"><strong>משתמשים בעולם:</strong> כ-20 מיליון משתמשים בסך הכול (הערכת Sacra, 2026). ב-Grafana Cloud: מעל 251 אלף פעילים חודשיים (Grafana Labs, אוגוסט 2026). <a class="src" href="https://sacra.com/research/grafana-labs" target="_blank" rel="noopener">מקור</a> <span class="tag">הערכה / מקור משני</span></div></div>
+      <div class="card"><h3><span class="rank">#2</span> <a href="https://sentry.io" target="_blank" rel="noopener">Sentry</a></h3><p>איתור שגיאות וביצועים באפליקציות.</p><div class="users"><strong>משתמשים בעולם:</strong> 4 מיליון מפתחים ב-130 אלף ארגונים ומעלה (Sentry, אתר החברה). <a class="src" href="https://sentry.io/customers/" target="_blank" rel="noopener">מקור</a> <span class="tag">נתון שפורסם</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://langfuse.com" target="_blank" rel="noopener">Langfuse</a></h3><p>מעקב אחר שימוש ועלויות של מודלים.</p><div class="users none"><strong>משתמשים בעולם:</strong> אין מספר משתמשים פומבי שנמצא. החברה נרכשה על ידי ClickHouse בינואר 2026. <a class="src" href="https://langfuse.com/about/about" target="_blank" rel="noopener">מקור</a> <span class="tag">אין נתון</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://www.langchain.com/langsmith" target="_blank" rel="noopener">LangSmith</a></h3><p>מעקב והערכה של יישומי LLM וסוכנים, מבית LangChain.</p><div class="users none"><strong>משתמשים בעולם:</strong> לא נמצא נתון משתמשים פומבי. <span class="tag">אין נתון</span></div></div>
+      <div class="card"><h3><span class="rank none">—</span> <a href="https://phoenix.arize.com" target="_blank" rel="noopener">Arize Phoenix</a></h3><p>כלי קוד פתוח לתצפית והערכה של מודלי שפה.</p><div class="users none"><strong>משתמשים בעולם:</strong> אין מספר משתמשים. כ-8 אלף כוכבים בגיטהאב (תחילת 2026). כוכבים אינם משתמשים. <a class="src" href="https://www.confident-ai.com/knowledge-base/top-arize-ai-alternatives-and-competitors-compared" target="_blank" rel="noopener">מקור</a> <span class="tag">אין נתון</span></div></div>
+    </div>
+  </section>
+
+  <section class="cat" data-cat="אזהרות">
+    <h2>אזהרות ומדיניות אבטחה</h2>
+    <div class="warn">
+      <strong>מדיניות אישית:</strong> לא להשתמש בכלים או במודלים שלא זוהו או שמקורם לא נבדק, אלא אם הם רצים בסביבה מקומית בלבד, ללא חיבור לאינטרנט.
+      <ul>
+        <li>כלים בשם TAB ו-Instinct שאינם מזוהים בבירור.</li>
+        <li>מודלים סיניים זולים.</li>
+        <li>סוכנים עם גישה רחבה למערכת, כמו OpenClaw, מריצים אותם רק בסביבה מבודדת, וסקילים של צד שלישי מתייחסים אליהם כקוד לא מהימן.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<p class="note">איך לקרוא את הדירוג: המספרים נאספו ממקורות ציבוריים ב-16/11/2026 ואינם בני השוואה מלאה. חלקם פעילים שבועיים, חלקם פעילים חודשיים, חלקם רשומים או מצטברים. בכל כרטיס מצוין סוג המדד, ותווית "הערכה" פירושה מקור משני או חברת מחקר ולא הודעה רשמית של החברה. כלי ללא נתון אמין מוצג בסוף הקטגוריה ללא דירוג. מחירים אינם מופיעים כי לא נבדקו מול הספקים.</p>
+<footer>© שמוליק שחר · SHAHAR AI PRODUCTIONS</footer>
+
+<script>
+  var sections = document.querySelectorAll('section.cat');
+  var box = document.getElementById('filters');
+  var cats = ['הכול'];
+  sections.forEach(function (s) { cats.push(s.getAttribute('data-cat')); });
+  cats.forEach(function (c, i) {
+    var b = document.createElement('button');
+    b.textContent = c;
+    if (i === 0) b.className = 'active';
+    b.addEventListener('click', function () {
+      box.querySelectorAll('button').forEach(function (x) { x.className = ''; });
+      b.className = 'active';
+      sections.forEach(function (s) {
+        s.style.display = (c === 'הכול' || s.getAttribute('data-cat') === c) ? '' : 'none';
+      });
+    });
+    box.appendChild(b);
+  });
+</script>
+</body>
+</html>
